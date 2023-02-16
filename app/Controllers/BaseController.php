@@ -39,7 +39,7 @@ abstract class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = ['user'];
+    protected $helpers = ['user', 'validation'];
 
     /**
      * Constructor.
@@ -98,9 +98,9 @@ abstract class BaseController extends Controller
                     foreach ($childs as $child) {
                         if ($parent->id == $child->parent) {
                             if ($child->status) {
-                                $menu .= '<li class="submenu-item"><a href="' . $child->pages . '"><i class="' . $child->icon . '"></i><span>' . $child->nama . '</span></a></li>';
+                                $menu .= '<li class="submenu-item"><a href="' . $child->pages . '"><span>' . $child->nama . '</span></a></li>';
                             } else {
-                                $menu .= '<li class="submenu-item"><a href="/maintenance"><i class="' . $child->icon . '"></i><span>' . $child->nama . '</span></a></li>';
+                                $menu .= '<li class="submenu-item"><a href="/maintenance"><span>' . $child->nama . '</span></a></li>';
                             }
                         }
                     }

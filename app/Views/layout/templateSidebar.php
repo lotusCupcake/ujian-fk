@@ -56,13 +56,13 @@
           <div class="dropdown">
             <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
               <div class="user-menu d-flex">
-                <div class="user-name text-end me-3">
+                <div class="user-name text-end me-3 mt-1">
                   <h6 class="mb-0 text-gray-600"><?= user()->email ?></h6>
                   <p class="mb-0 text-sm text-gray-600"><?= getSpecificUser(user()->id)->description ?></p>
                 </div>
                 <div class="user-img d-flex align-items-center">
                   <div class="avatar avatar-md">
-                    <img src="<?= base_url() ?>/template/assets/images/faces/2.jpg" />
+                    <i class="fas fa-user-circle fa-3x"></i>
                   </div>
                 </div>
               </div>
